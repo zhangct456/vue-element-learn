@@ -1,0 +1,472 @@
+{
+  "testData": {
+  	"name": "testData"
+  },
+  "menuList": [
+    {
+      "id": "CommodityMgmt",
+      "flag": "TCommodityInfoMgmt",
+      "toUrl": "/GoodsInfoList/",
+      "name": "商品信息管理"
+    },
+    {
+      "id": "PurchaseOrdeMgmt",
+      "backPic": "heading4",
+      "flag": "PurchaseOrdeMgmt",
+      "name": "订单查询",
+      "children": [
+        {
+          "id": "SmkOrderMgmt",
+          "parentId": "PurchaseOrdeMgmt",
+          "flag": "SmkOrderMgmt",
+          "toUrl": "/OrderQuery/",
+          "name": "订单查询"
+        },
+        {
+          "id": "SmkOrderMgmt",
+          "parentId": "PurchaseOrdeMgmt",
+          "flag": "SmkOrderMgmt",
+          "toUrl": "/QryPrintOrder/",
+          "name": "发货单打印"
+        },
+        {
+          "id": "AfterSaleMgmt",
+          "parentId": "PurchaseOrdeMgmt",
+          "flag": "AfterSaleMgmt",
+          "toUrl": "/AfterSaleOrderQuery/",
+          "name": "售后管理"
+        }
+      ]
+    },
+    {
+      "id": "CommentMgmt",
+      "backPic": "heading7",
+      "flag": "TCommentMgmt",
+      "toUrl": "/CommentManage/",
+      "name": "评论管理"
+    },
+    {
+      "id": "OperatorMgmt",
+      "backPic": "heading14",
+      "flag": "OperatorMgmt",
+      "name": "操作员管理",
+      "children": [
+        {
+          "id": "TTellerMgmt",
+          "parentId": "OperatorMgmt",
+          "flag": "TTellerMgmt",
+          "toUrl": "/UserManage/",
+          "name": "用户管理"
+        },
+        {
+          "id": "TRoleMgmt",
+          "parentId": "OperatorMgmt",
+          "flag": "TRoleMgmt",
+          "toUrl": "/RoleManage/",
+          "name": "角色管理"
+        },
+        {
+          "id": "TTellerHistoryQryMgmt",
+          "parentId": "OperatorMgmt",
+          "flag": "TTellerHistoryQryMgmt",
+          "toUrl": "/LogQuery/",
+          "name": "日志查询"
+        }
+      ]
+    },
+    {
+      "id": "SupplierChantMgmt",
+      "flag": "SupplierMgmt",
+      "toUrl": "/SupplierListQry/",
+      "name": "供应商管理"
+    },
+    {
+      "id": "SBusinessAuthGrpMgmt",
+      "flag": "SBusinessAuthMgmt",
+      "toUrl": "/RecheckManage/",
+      "name": "复核管理"
+    },
+    {
+      "id": "SalesPromotionGrpMgmt",
+      "flag": "SalesPromotionGrpMgmt",
+      "name": "营销管理",
+      "children": [
+        {
+          "id": "CouponMgmt",
+          "parentId": "SalesPromotionGrpMgmt",
+          "flag": "CouponMgmt",
+          "toUrl": "/DiscountCoupon/",
+          "name": "优惠券管理"
+        },
+        {
+          "id": "FullReductionMgmt",
+          "parentId": "SalesPromotionGrpMgmt",
+          "flag": "FullReductionMgmt",
+          "toUrl": "/DiscountActivityQry/",
+          "name": "人气推荐管理"
+        },
+        {
+          "id": "OnePayMgmt",
+          "parentId": "SalesPromotionGrpMgmt",
+          "flag": "OnePayMgmt",
+          "toUrl": "/OneRmbBuy/",
+          "name": "一元购管理"
+        },
+        {
+          "id": "CouponActivityManage",
+          "parentId": "SalesPromotionGrpMgmt",
+          "flag": "CouponActivityManage",
+          "toUrl": "/CouponActivityManage/",
+          "name": "优惠券活动管理"
+        }
+      ]
+    },
+    {
+      "id": "FaqGrpMgmt",
+      "flag": "FaqMgmt",
+      "toUrl": "/Questions/",
+      "name": "常见问题设置"
+    },
+    {
+      "id": "GoodsBrandChantMgmt",
+      "flag": "GoodsBrandMgmt",
+      "toUrl": "/BrandManage/",
+      "name": "品牌管理"
+    },
+    {
+      "id": "AboutUsGrpMgmt",
+      "flag": "AboutUsMgmt",
+      "toUrl": "/AboutUs/",
+      "name": "关于我们"
+    },
+    {
+      "id": "StatisticalGrpMgmt",
+      "flag": "StatisticalGrpMgmt",
+      "name": "统计管理",
+      "children": [
+        {
+          "id": "StatisticalQryMgmt",
+          "parentId": "StatisticalGrpMgmt",
+          "flag": "StatisticalQryMgmt",
+          "toUrl": "/OrderRTimeStatistics/",
+          "name": "订单实时数据"
+        },
+        {
+          "id": "OderQryMgmt",
+          "parentId": "StatisticalGrpMgmt",
+          "flag": "OderQryMgmt",
+          "toUrl": "/OrderStatistics/",
+          "name": "订单数据统计"
+        },
+        {
+          "id": "GoodsReportQryMgmt",
+          "parentId": "StatisticalGrpMgmt",
+          "flag": "GoodsReportQryMgmt",
+          "toUrl": "/GoodsStatistics/",
+          "name": "商品数据统计"
+        },
+        {
+          "id": "UserDataQryMgmt",
+          "parentId": "StatisticalGrpMgmt",
+          "flag": "UserDataQryMgmt",
+          "toUrl": "/UserStatistics/",
+          "name": "用户数据统计"
+        },
+        {
+          "id": "TrsDatastatisticstMgmt",
+          "parentId": "StatisticalGrpMgmt",
+          "flag": "TrsDatastatisticstMgmt",
+          "toUrl": "/TransactionStatistics/",
+          "name": "交易数据统计"
+        },
+        {
+          "id": "GoodsClassifyStatistics",
+          "parentId": "StatisticalGrpMgmt",
+          "flag": "GoodsClassifyStatistics",
+          "toUrl": "/ClassifyStatistic/",
+          "name": "商品分类统计"
+        }
+      ]
+    },
+    {
+      "id": "TLogisticMgmt",
+      "flag": "TLogisticMgmt",
+      "toUrl": "/LogisticsManage/",
+      "name": "物流模板管理"
+    },
+    {
+      "id": "LogisticsMessageMgmt",
+      "flag": "LogisticsMessageMgmt",
+      "toUrl": "/LogisticsInfoImport/",
+      "name": "物流信息管理"
+    },
+    {
+      "id": "TActiveMgmt",
+      "flag": "TActiveMgmt",
+      "name": "活动管理",
+      "children": [
+        {
+          "id": "TCommentActiveMgmt",
+          "parentId": "TActiveMgmt",
+          "flag": "TCommentActiveMgmt",
+          "toUrl": "/ForetasteCheck/",
+          "name": "活动返现审核"
+        },
+        {
+          "id": "TForetasteActiveMgmt",
+          "parentId": "TActiveMgmt",
+          "flag": "TForetasteActiveMgmt",
+          "toUrl": "/Foretaste/",
+          "name": "精选活动管理"
+        }
+      ]
+    },
+    {
+      "id": "TclassMgmt",
+      "flag": "TclassMgmt",
+      "name": "分类管理",
+      "children": [
+        {
+          "id": "TClassMgmt",
+          "parentId": "TclassMgmt",
+          "flag": "TClassMgmt",
+          "toUrl": "/ClassifyManage/",
+          "name": "分类管理"
+        },
+        {
+          "id": "TClassAttrMgmt",
+          "parentId": "TclassMgmt",
+          "flag": "TClassAttrMgmt",
+          "toUrl": "/SpecificationManage/",
+          "name": "规格管理"
+        }
+      ]
+    },
+    {
+      "id": "SettleDataManage",
+      "flag": "SettleDataManage",
+      "name": "结算数据管理",
+      "children": [
+        {
+          "id": "SettleDataManage",
+          "parentId": "SettleDataManage",
+          "flag": "SettleDataManage",
+          "toUrl": "/SettleStatistics/",
+          "name": "结算数据管理"
+        },
+        {
+          "id": "CMSettleDataManage",
+          "parentId": "SettleDataManage",
+          "flag": "CMSettleDataManage",
+          "toUrl": "/DistriCommissionManage/",
+          "name": "分佣结算数据管理"
+        }
+      ]
+    },
+    {
+      "id": "TpushAddressMgmt",
+      "flag": "TpushAddressMgmt",
+      "name": "专享区管理",
+      "children": [
+        {
+          "id": "DistributionMgmt",
+          "parentId": "TpushAddressMgmt",
+          "flag": "DistributionMgmt",
+          "toUrl": "/TakeSelfAddress/",
+          "name": "自提点管理"
+        },
+        {
+          "id": "SpotAddressMgmt",
+          "parentId": "TpushAddressMgmt",
+          "flag": "SpotAddressMgmt",
+          "toUrl": "/AddressManage/",
+          "name": "现货点管理"
+        },
+        {
+          "id": "EnterPriseAddressMgmt",
+          "parentId": "TpushAddressMgmt",
+          "flag": "EnterPriseAddressMgmt",
+          "toUrl": "/PushBusinessManage/",
+          "name": "企业管理"
+        },
+        {
+          "id": "PrerogativeManage",
+          "parentId": "TpushAddressMgmt",
+          "flag": "PrerogativeManage",
+          "toUrl": "/PrerogativeActivityManage/",
+          "name": "专享好货管理"
+        }
+      ]
+    },
+    {
+      "id": "TOrginCountry",
+      "flag": "OrginCountryMgmt",
+      "toUrl": "/OriginCountryManage/",
+      "name": "商品来源地管理"
+    },
+    {
+      "id": "HomeLinkManage",
+      "flag": "HomeLinkManage",
+      "toUrl": "/HomeTopicManage/",
+      "name": "首页链接排版管理"
+    },
+    {
+      "id": "SubjectManage",
+      "flag": "SubjectManage",
+      "name": "专题管理",
+      "children": [
+        {
+          "id": "BigPictureManage",
+          "parentId": "SubjectManage",
+          "flag": "BigPictureManage",
+          "toUrl": "/LargeCommodityManage/",
+          "name": "大图商品专题管理"
+        },
+        {
+          "id": "ChosenGoodsManage",
+          "parentId": "SubjectManage",
+          "flag": "ChosenGoodsManage",
+          "toUrl": "/ChosenGoodsManage/",
+          "name": "精选商品专题管理"
+        },
+        {
+          "id": "ImageTextManage",
+          "parentId": "SubjectManage",
+          "flag": "ImageTextManage",
+          "toUrl": "/PictureTextManage/",
+          "name": "图文专题管理"
+        }
+      ]
+    },
+    {
+      "id": "CommissionManage",
+      "flag": "CommissionManage",
+      "name": "分佣管理",
+      "children": [
+        {
+          "id": "CommissionManage",
+          "parentId": "CommissionManage",
+          "flag": "CommissionManage",
+          "toUrl": "/SubCommissionManage/",
+          "name": "分佣模板管理"
+        },
+        {
+          "id": "PromotionManage",
+          "parentId": "CommissionManage",
+          "flag": "PromotionManage",
+          "toUrl": "/PromotionManage/",
+          "name": "推广商管理"
+        },
+        {
+          "id": "SalerPersonManage",
+          "parentId": "CommissionManage",
+          "flag": "SalerPersonManage",
+          "toUrl": "/PromotersManage/",
+          "name": "推广员管理"
+        }
+      ]
+    },
+    {
+      "id": "BillCheckGrpMgmt",
+      "flag": "BillCheckMgmt",
+      "toUrl": "/Reconciliation/",
+      "name": "系统对账管理"
+    },
+    {
+      "id": "SuperManageGrp",
+      "flag": "SuperManage",
+      "toUrl": "/GoodsIcon/",
+      "name": "商品角标管理"
+    },
+    {
+      "id": "ConsumerManage",
+      "flag": "ConsumerManage",
+      "name": "用户管理",
+      "children": [
+        {
+          "id": "ConsumerQryMgmt",
+          "parentId": "ConsumerManage",
+          "flag": "ConsumerQryMgmt",
+          "toUrl": "/Member/",
+          "name": "用户查询"
+        }
+      ]
+    },
+    {
+      "id": "MessageMgmt",
+      "flag": "MessageMgmt",
+      "name": "消息管理",
+      "children": [
+        {
+          "id": "MessageMgmt",
+          "parentId": "MessageMgmt",
+          "flag": "MessageMgmt",
+          "toUrl": "/Notice/",
+          "name": "公告查询"
+        },
+        {
+          "id": "MessageMgmt",
+          "parentId": "MessageMgmt",
+          "flag": "MessageMgmt",
+          "toUrl": "/Banner/",
+          "name": "轮播图查询"
+        }
+      ]
+    },
+    {
+      "id": "InsuranceMgmt",
+      "flag": "InsuranceMgmt",
+      "name": "保险管理",
+      "children": [
+        {
+          "id": "InsuranceMgmt",
+          "parentId": "InsuranceMgmt",
+          "flag": "InsuranceMgmt",
+          "toUrl": "/Insurance/",
+          "name": " 活动管理"
+        },
+        {
+          "id": "InsuranceMgmt",
+          "parentId": "InsuranceMgmt",
+          "flag": "InsuranceMgmt",
+          "toUrl": "/insuranceClass/",
+          "name": "分类管理"
+        },
+        {
+          "id": "InsuranceMgmt",
+          "parentId": "InsuranceMgmt",
+          "flag": "InsuranceMgmt",
+          "toUrl": "/headBanner/",
+          "name": " 保险管理"
+        }
+      ]
+    },
+    {
+      "id": "BusinessPointsMgmtGrp",
+      "flag": "BusinessPointsMgmt",
+      "toUrl": "/MerchantManage/",
+      "name": "商户积分管理"
+    },
+    {
+      "id": "ChannelMgmtGrp",
+      "flag": "ChannelMgmtGrp",
+      "name": "商户管理",
+      "children": [
+        {
+          "id": "ChannelMgmt",
+          "parentId": "ChannelMgmtGrp",
+          "flag": "ChannelMgmt",
+          "toUrl": "/MerchantGoods/",
+          "name": "商品管理"
+        },
+        {
+          "id": "ChannelMgmt",
+          "parentId": "ChannelMgmtGrp",
+          "flag": "ChannelMgmt",
+          "toUrl": "/MerchantOrders/",
+          "name": "订单管理"
+        }
+      ]
+    }
+  ]
+}
