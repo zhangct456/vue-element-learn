@@ -16,7 +16,7 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-``` bash
+```
 
 ## router设置
 	src/utils/menuList.js中存放router的json数据
