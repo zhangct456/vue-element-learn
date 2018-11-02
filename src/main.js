@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import setting from './setting'
 import store from './store'
+import "@/assets/js/jquery-1.9.1.js"
 import "@/assets/css/commen.css"
 
 Vue.config.productionTip = false
