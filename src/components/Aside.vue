@@ -1,6 +1,6 @@
 <template>
-	<div>
-		<el-menu :default-active="acitveItem" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+	<div id="aside-box">
+		<el-menu id="aside-scroll" :default-active="acitveItem" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
 			<template v-for="(item, index) in subMenu">
 				<el-submenu :index="index+''" v-if="item.children&&item.children.length>0">
 					<template slot="title">
@@ -18,10 +18,15 @@
 				</el-menu-item>
 			</template>
 		</el-menu>
+		<div id="scroll">
+			<div id="scrollBar"></div>
+		</div>
 	</div>
 </template>
 
 <script>
+	import { fnScroll } from "@/utils"
+	
 	export default {
 		name: "Aside",
 		data() {
@@ -43,16 +48,25 @@
 		},
 		watch: {},
 		methods: {
-			handleOpen: function(){
-				
+			handleOpen: function(key, keyPath){
+				this.resizeAsideScroll();
+				console.log(key, keyPath);
 			},
-			handleClose: function(){
-				
+			handleClose: function(key, keyPath){
+				this.resizeAsideScroll();
+				console.log(key, keyPath);
+			},
+			resizeAsideScroll: function(){
+				setTimeout(function(){
+					fnScroll('#aside-box', '#aside-scroll', '#scroll', '#scrollBar');
+				}, 300);
 			}
 		},
 		beforeCreated() {},
 		created() {},
-		mounted() {},
+		mounted() {
+			this.$store.dispatch('getMenuList').then(this.resizeAsideScroll);
+		},
 		components: {}
 	}
 </script>
@@ -61,4 +75,12 @@
 .el-menu{
 	border-right: none;
 }
+#aside-box{
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+#scroll{ width:5px; position:absolute; right:0; top:0; opacity:0; transition:opacity .3s;}
+#scrollBar{ width:5px; background:#76839E; position:absolute; left:0; border-radius:5px;}
+#aside-box:hover #scroll{ opacity:1;}
 </style>

@@ -31,11 +31,6 @@
 		},
 		mounted() {
 			let _this = this;
-//			this.$remote.post("menu.do").then(function(data){
-//				_this.menu = data.List;
-//				let rootRoute = window.location.hash.split('/')[1];
-//				_this.activeIndex = '/' + rootRoute;
-//			})
 			this.$store.dispatch('getMenuList').then(function(data){
 				_this.menu = data;
 				let rootRoute = window.location.hash.split('/')[1];
