@@ -13,7 +13,7 @@ export default {
 			return function(key) {
 				if(state.menuList && state.menuList.length != 0) {
 					for(let i = 0; i < state.menuList.length; i++) {
-						if(state.menuList[i].id == key) {
+						if(state.menuList[i].name == key) {
 							return state.menuList[i];
 						}
 					}

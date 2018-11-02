@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-  	<Header></Header>
-    <router-view/>
+	  <el-container class="all-box">
+		  <el-header>
+		  	<Header></Header>
+		  </el-header>
+		  <router-view/>
+		</el-container>
   </div>
 </template>
 
@@ -12,10 +16,18 @@ export default {
   components: {
   	Header
   },
+  methods: {
+  },
   mounted() {
   }
 }
 </script>
 
 <style>
+.el-header{
+	padding: 0;
+}
+.all-box{
+	height: 100%;
+}
 </style>

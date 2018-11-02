@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+		<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true" background-color="#000" text-color="#fff" active-text-color="#ffd04b">
 			<template v-for="(item, index) in menu">
 				<el-menu-item :index="'/'+item.url">{{item.text}}</el-menu-item>
 			</template>
@@ -47,5 +47,7 @@
 </script>
 
 <style>
-
+.el-menu-demo{
+	padding-left: 50px;
+}
 </style>

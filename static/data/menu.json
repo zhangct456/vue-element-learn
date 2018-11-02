@@ -25,6 +25,20 @@
 							"text": "配置"
 						}
 					]
+				},
+				{
+					"name": "node",
+					"fileName": "Node",
+					"url": "node",
+					"text": "node",
+					"children": [
+						{
+							"name": "nodeIntall",
+							"fileName": "NodeIntall",
+							"url": "nodeIntall",
+							"text": "下载安装"
+						}
+					]
 				}
 			]
 		},
