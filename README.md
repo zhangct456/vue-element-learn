@@ -17,11 +17,11 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
-# router设置
+## router设置
 	src/utils/menuList.js中存放router的json数据
 	src/router 中获取到router信息后使用 src/utils/routerCreate.js 中的方法生成router
 
-# 项目目录结构
+## 项目目录结构
 	build : 项目构建的相关代码
 	config : 配置目录，包括端口、环境等的配置
 	src : 开发的主要目录
