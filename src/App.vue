@@ -1,28 +1,21 @@
 <template>
   <div id="app">
+  	<Header></Header>
     <router-view/>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'App',
-    components: {
-    },
-    props: {},
-    data() {
-      return {
-      };
-    },
-    watch: {},
-    computed: {},
-    methods: {},
-    created() {},
-    mounted() {
-    }
+import Header from "@/components/Header"
+export default {
+  name: 'App',
+  components: {
+  	Header
+  },
+  mounted() {
   }
+}
 </script>
 
 <style>
-  #app {}
 </style>

@@ -4,9 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import setting from './setting'
-import "@/assets/js/jquery-1.9.1.js"
-import "@/assets/js/common.js"
-import "@/assets/css/style.css"
+import store from './store'
+import "@/assets/css/commen.css"
 
 Vue.config.productionTip = false
 
@@ -14,6 +13,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

@@ -1,44 +1,35 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import { MainRouter } from './main/main.route'
-import { GoodsRouter } from './goods/goods.route'
-import { FinanceRouter } from './finance/finance.route'
-import { DistributionRouter } from './distribution/distribution.route'
-import { GoodsConfigRouter } from './goodsConfig/goodsConfig.route'
-import { MarketingRouter } from './marketing/marketing.route'
-import { PermissionRouter } from './permission/permission.route'
-import { SettingRouter } from './setting/setting.route'
-import { StatisticsRouter } from './statistics/statistics.route'
-import { UserRouter } from './user/user.route'
+import WebRouter from './webLearn/webLearn.route'
 
 Vue.use(Router)
 
-export default new Router({
-	routes: [{
-			path: '',
-			redirect: 'login',
-		},{
-			path: '/login',
-			name: 'login',
-			component: () => import("@/pages/Login.vue")
-		},{
-			path: '/app',
-			name: 'app',
-			component: () => import("@/pages/LoginInner.vue"),
+
+var route = new Router({
+  routes: [
+		{path: '/', redirect: '/webLearn'},
+		{
+			path: "/test",
+			name: "test",
+			component: () => import("@/pages/Test.vue"),
 			children: [
-				MainRouter,
-				GoodsRouter
+				{
+					path: "test2",
+					name: "test2",
+					component: () => import("@/pages/Test2.vue"),
+				}
 			]
-		}
-//		MainRouter,
-//		FinanceRouter,
-//		DistributionRouter,
-//		GoodsConfigRouter,
-//		MarketingRouter,
-//		PermissionRouter,
-//		SettingRouter,
-//		StatisticsRouter,
-//		UserRouter,
-//		GoodsRouter
+		},
+	  WebRouter
 	]
 })
+
+route.beforeEach((to, from, next)=>{
+  //do something
+  next();
+});
+route.afterEach((to, from, next) => {
+    console.log(to.path);
+});
+
+export default route

@@ -1,72 +1,51 @@
 <template>
-  <div class="Header">
-    <header>
-	    <div class="logoArea"></div>
-	    <ul class="nav">
-	    		<li :class="{'act':index==activeMenu}" v-for="(item, index) in menuList">
-	    			<a @click="choiceMenu(index)">{{item.text}}</a>
-	    		</li>
-	    </ul>
-	    <dl class="user">
-	        <dt>admin123123</dt>
-	        <dd>
-	            <a class="icon-set">账户设置</a>
-	            <a class="icon-massage" data-num="99">消息</a>
-	            <a class="icon-logout">退出系统</a>
-	        </dd>
-	    </dl>
-	</header>
-  </div>
+	<div>
+		<el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" :router="true" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+			<template v-for="(item, index) in menu">
+				<el-menu-item :index="'/'+item.url">{{item.text}}</el-menu-item>
+			</template>
+		</el-menu>
+	</div>
 </template>
 
 <script>
-  export default {
-  	name: "Header",
-    data() {
-      return {
-      	menuList: [],
-      	activeMenu: 0
-      }
-    },
-    props: [],
-    computed: {},
-    watch: {
-    },
-    methods: {
-    	choiceMenu(index) {
-    		this.activeMenu = index;
-    		this.$router.push({name: this.menuList[index].name});
-    	},
-    	changeMenuActive(menuList, currentRootRoute){
-    		for (let i = 0; i < menuList.length; i ++) {
-    			if(menuList[i].url == currentRootRoute){
-    				this.activeMenu = i;
-    			}
-    		}
-    	}
-    },
-    beforeCreated() {
-      console.log('component before created')
-    },
-    created() {
-      console.log('component created')
-    },
-    mounted() {
-    	//初始化修改选中状态
-    	let currentRoute = window.location.hash.split('/');
-    	let currentRootRoute = currentRoute[0] == "#" ? currentRoute[2] : currentRoute[1];
-    	var that = this;
-			this.$commenData.getMenuList().then(function(){
-				that.menuList = that.$commenData.menuList;
-				that.changeMenuActive(that.menuList, currentRootRoute);
-			}, function(){
-				
+	export default {
+		name: "Header",
+		data() {
+			return {
+				menu: [],
+				activeIndex: ""
+			}
+		},
+		props: {},
+		computed: {
+		},
+		watch: {},
+		methods: {
+			handleSelect(key, keyPath) {
+		    	console.log(key, keyPath);
+		  }
+		},
+		beforeCreated() {},
+		created() {
+		},
+		mounted() {
+			let _this = this;
+//			this.$remote.post("menu.do").then(function(data){
+//				_this.menu = data.List;
+//				let rootRoute = window.location.hash.split('/')[1];
+//				_this.activeIndex = '/' + rootRoute;
+//			})
+			this.$store.dispatch('getMenuList').then(function(data){
+				_this.menu = data;
+				let rootRoute = window.location.hash.split('/')[1];
+				_this.activeIndex = '/' + rootRoute;
 			})
-    },
-    components: {
-    }
-  }
+		},
+		components: {}
+	}
 </script>
+
 <style>
 
 </style>
