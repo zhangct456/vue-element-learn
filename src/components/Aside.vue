@@ -7,10 +7,12 @@
 						<i class="el-icon-menu"></i>
 						<span>{{item.text}}</span>
 					</template>
-					<el-menu-item :index="index+'-'+index2" v-for="(item2, index2) in item.children">
-						<i class="el-icon-document"></i>
-						<span>{{item2.text}}</span>
-					</el-menu-item>
+					<template v-for="(item2, index2) in item.children">
+						<el-menu-item :index="index+'-'+index2">
+							<i class="el-icon-document"></i>
+							<span>{{item2.text}}</span>
+						</el-menu-item>
+					</template>
 				</el-submenu>
 				<el-menu-item :index="index+''" v-else>
 					<i class="el-icon-document"></i>
