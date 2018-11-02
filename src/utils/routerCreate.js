@@ -1,3 +1,18 @@
+/*
+ * createRouter
+ * 参数:		subMenu:	子路由的信息
+ * 			subRoute:	接收空json，处理后该json成为结果
+ * 			parentFileName: 回调用，一般不传
+ * 			level:	回调用，一般不传
+ * 
+ * {
+	"name": "webLearn",			//对应路由name
+	"fileName": "WebLearn",		//对应路由文件名
+	"url": "webLearn",			//对应路由path
+	"text": "前端学习",			//无用
+	"children": []				//对应子路由
+	}
+ */
 function createRouter(subMenu, subRoute, parentFileName, level) {
 	if(!parentFileName) {
 		parentFileName = '';
@@ -8,7 +23,7 @@ function createRouter(subMenu, subRoute, parentFileName, level) {
 	}else{
 		subRoute.path = subMenu.url;
 	}
-	subRoute.name = level + subMenu.name;
+	subRoute.name = level + subMenu.name;//n级子路由name前加n个下划线，区分路由等级
 	subRoute.component = () => import('@/pages/' + parentFileName + subMenu.fileName + '.vue');
 	if(subMenu.children && subMenu.children.length != 0) {
 		subRoute.children = [];
