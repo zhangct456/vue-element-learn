@@ -1,8 +1,6 @@
 <template>
 	<div>
-		<div>
-			vuecreate
-		</div>
+		<el-button @click="$alert({text:'zzz',title:'zzzz'})"></el-button>
 	</div>
 </template>
 
