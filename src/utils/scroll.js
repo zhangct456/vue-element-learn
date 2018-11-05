@@ -1,4 +1,17 @@
-
+/*
+ * 参数:(内容外部box块id,内容块id,滚动条box块id,滚动条块id)
+ * 示例:
+ * <div id="oScrollbox">
+		<div id="oBox">
+			//内容区域
+		</div>
+		<div id="oScroll">
+			<div id="oBar"></div>
+		</div>
+	</div>
+	该示例调用:fnScroll('#oScrollbox', '#oBox', '#oScroll', '#oBar')
+	注意点:box大小变化后需重新调用该方法，如异步获取ul
+ */
 function fnScroll(oScrollbox, oBox, oScroll, oBar){
 	function getId( id ){
 		return document.querySelector( id );
