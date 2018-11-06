@@ -24,7 +24,8 @@ function createRouter(subMenu, subRoute, parentFileName, level) {
 		subRoute.path = subMenu.url;
 	}
 	subRoute.name = level + subMenu.name;//n级子路由name前加n个下划线，区分路由等级
-	subRoute.component = () => import('@/pages/' + parentFileName + subMenu.fileName + '.vue');
+	subRoute.component = () => import('@/pages/' + parentFileName + subMenu.fileName);
+//	subRoute.component = () => import('@/pages/' + parentFileName + subMenu.fileName + '.vue');
 	if(subMenu.children && subMenu.children.length != 0) {
 		subRoute.children = [];
 		for(let i = 0; i < subMenu.children.length; i++) {
