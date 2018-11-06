@@ -1,6 +1,5 @@
 <template>
 	<div>
-		vue
 		<router-view/>
 	</div>
 </template>
