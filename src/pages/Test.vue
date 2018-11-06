@@ -1,7 +1,7 @@
 <template>
 	<div>
 		Test
-		<router-view></router-view>
+		<router-view class="markdown_box"></router-view>
 	</div>
 </template>
 
@@ -30,4 +30,5 @@
 </script>
 
 <style>
+	
 </style>

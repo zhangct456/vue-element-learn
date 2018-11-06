@@ -12,11 +12,12 @@ var route = new Router({
 			path: "/test",
 			name: "test",
 			component: () => import("@/pages/Test.vue"),
+			redirect: {name: 'test2'},
 			children: [
 				{
 					path: "test2",
 					name: "test2",
-					component: () => import("@/pages/Test2.vue"),
+					component: () => import("@/pages/Test2"),
 				}
 			]
 		},
