@@ -24,7 +24,7 @@
 		methods: {
 			handleSelect(key, keyPath) {
 		    	console.log(key, keyPath);
-		  }
+			}
 		},
 		beforeCreated() {},
 		created() {
