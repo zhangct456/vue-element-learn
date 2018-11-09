@@ -1,4 +1,5 @@
 import axios from "@/setting/axios.conf"
+import {getSubMenu} from "@/utils"
 
 export default {
 	state: {
@@ -35,11 +36,17 @@ export default {
 		getMenuList(context, reGetFlag) {
 			return new Promise(function(resolve, reject) {
 				if(!context.state.menuList || context.state.firstGet || reGetFlag) {
-					axios.post('menu.do', {}).then(function(data) {
-						context.commit('updateFirstGet', false);
-						context.commit('updateMenuList', data.List);
-						resolve(context.state.menuList);
-					})
+//					//发交易获取方法
+//					axios.post('menu.do', {}).then(function(data) {
+//						context.commit('updateFirstGet', false);
+//						context.commit('updateMenuList', data.List);
+//						resolve(context.state.menuList);
+//					})
+					//直接和router共用
+					let menulist = getSubMenu();
+					context.commit('updateFirstGet', false);
+					context.commit('updateMenuList', menulist);
+					resolve(context.state.menuList);
 				} else {
 					resolve(context.state.menuList);
 				}
