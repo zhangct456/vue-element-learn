@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<router-view class="markdown_box"/>
+		<router-view class="markdown-body"/>
 	</div>
 </template>
 
