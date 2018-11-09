@@ -1,6 +1,6 @@
 <template>
 	<div id="aside-box">
-		<el-menu id="aside-scroll" :default-active="acitveItem" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+		<el-menu id="aside-scroll" :default-active="acitveItem" @select="handleSelect" @open="handleOpen" @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
 			<template v-for="(item, index) in subMenu">
 				<el-submenu :index="index+''" v-if="item.children&&item.children.length>0">
 					<template slot="title">
@@ -52,11 +52,16 @@
 		methods: {
 			handleOpen: function(key, keyPath){
 				this.resizeAsideScroll();
-				console.log(key, keyPath);
 			},
 			handleClose: function(key, keyPath){
 				this.resizeAsideScroll();
-				console.log(key, keyPath);
+			},
+			handleSelect: function(key, keyPath){
+				let arr = key.split('-');
+				if(arr[1]){
+					let nextPage = this.subMenu[arr[0]].children[arr[1]];
+					this.$router.push({name: '__' + nextPage.name})
+				}
 			},
 			resizeAsideScroll: function(){
 				setTimeout(function(){
