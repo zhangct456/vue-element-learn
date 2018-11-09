@@ -50,7 +50,9 @@ cnpm install
 cnpm run dev
 ```
 
-默认浏览器会自动打开网站 http://localhost:8080/#/ ，或者手动打开
+默认浏览器会自动打开网站 http://localhost:8080/#/ ，或者手动打开，显示如下界面说明成功
+
+![file-list](@/assets/images/WebLearn/vue-page.jpg)
 
 
 
