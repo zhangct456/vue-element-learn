@@ -15,20 +15,24 @@ const MENU_LIST = [{
 				"text": "新建项目"
 			},
 			{
-				"name": "vueConfig",
-				"fileName": "VueConfig",
-				"url": "vueConfig",
-				"text": "配置"
+				"name": "vueRouter",
+				"fileName": "VueRouter",
+				"url": "vueRouter",
+				"text": "路由"
 			}
 		]
 	}]
 }]
 
 const getSubMenu = function(key) {
-	for(let i = 0; i < MENU_LIST.length; i++) {
-		if(MENU_LIST[i].name == key) {
-			return MENU_LIST[i];
+	if(key){
+		for(let i = 0; i < MENU_LIST.length; i++) {
+			if(MENU_LIST[i].name == key) {
+				return MENU_LIST[i];
+			}
 		}
+	}else{
+		return MENU_LIST
 	}
 }
 
