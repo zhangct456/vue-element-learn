@@ -83,6 +83,28 @@ var route = new Router({
 
 ----
 
+### 监听跳转
+
+`beforeEach`：路由跳转前执行；
+
+`afterEach`：路由跳转后执行；
+
+可以在这里处理路由监听的信息。
+
+```
+var route = new Router(...)
+
+route.beforeEach((to, from, next)=>{
+  //do something
+  next();
+});
+route.afterEach((to, from, next) => {
+    console.log(to.path);
+});
+```
+
+----
+
 ### 优化
 
 rouer信息可以写成json格式：
