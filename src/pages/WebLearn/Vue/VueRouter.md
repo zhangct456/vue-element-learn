@@ -48,9 +48,7 @@ new Vue({
 <img src="@/assets/images/WebLearn/router-menu.jpg" width="40%" />
 </center>
 
-关于`vue-router`配置参数参考文档:
-
->	[https://router.vuejs.org/zh/index.html](https://router.vuejs.org/zh/index.html)  
+关于`vue-router`配置参数参考[官方文档](https://router.vuejs.org/zh/index.html):
 
 vue-router中的routes参数为一个数组，可以给子路由建相应js文件：
 
@@ -102,6 +100,20 @@ route.afterEach((to, from, next) => {
     console.log(to.path);
 });
 ```
+
+该方法[参数含义](https://segmentfault.com/a/1190000009651628):
+
+*	to: Route: 即将要进入的目标 路由对象
+
+*	from: Route: 当前导航正要离开的路由
+	
+*	next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。
+	
+	*	next(): 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是 confirmed （确认的）。
+	
+	*	next(false): 中断当前的导航。如果浏览器的 URL 改变了（可能是用户手动或者浏览器后退按钮），那么 URL 地址会重置到 from 路由对应的地址。
+	
+	*	next('/') 或者 next({ path: '/' }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。
 
 ----
 
