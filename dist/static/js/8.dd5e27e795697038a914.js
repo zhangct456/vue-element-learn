@@ -1,2 +1,0 @@
-webpackJsonp([8],{"4HSR":function(e,n){},pz4x:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var o={render:function(){var e=this.$createElement;return(this._self._c||e)("div",[this._v("\n\tvueconfig\n")])},staticRenderFns:[]};var r=t("C7Lr")({name:"VueConfig",data:function(){return{}},props:[],computed:{},watch:{},methods:{},beforeCreated:function(){},created:function(){},mounted:function(){},components:{}},o,!1,function(e){t("4HSR")},null,null);n.default=r.exports}});
-//# sourceMappingURL=8.dd5e27e795697038a914.js.map
