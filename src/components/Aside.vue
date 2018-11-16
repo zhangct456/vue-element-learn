@@ -90,4 +90,5 @@
 #scroll{ width:5px; position:absolute; right:0; top:0; opacity:0; transition:opacity .3s;}
 #scrollBar{ width:5px; background:#76839E; position:absolute; left:0; border-radius:5px;}
 #aside-box:hover #scroll{ opacity:1;}
+#aside-scroll{border: none;}
 </style>

@@ -8,19 +8,6 @@ Vue.use(Router)
 var route = new Router({
   routes: [
 		{path: '/', redirect: '/webLearn'},
-		{
-			path: "/test",
-			name: "test",
-			component: () => import("@/pages/Test.vue"),
-			redirect: {name: 'test2'},
-			children: [
-				{
-					path: "test2",
-					name: "test2",
-					component: () => import("@/pages/Test2"),
-				}
-			]
-		},
 	  WebRouter
 	]
 })

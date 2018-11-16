@@ -65,15 +65,15 @@
 							let file = files[i];
 							if(file){
 								if(!reg.test(file.name)){
-	//								that.$alert({
-	//									text: "文件格式不正验，请重新选择!(支持jpg/png)"
-	//								});
+//									that.$alert({
+//										text: "文件格式不正验，请重新选择!(支持jpg/png)"
+//									});
 									resolve();
 								}
 								if(file.size > 5242880){
-	//								that.$alert({
-	//									text: "文件大小最大为5M，请重新选择!"
-	//								});
+//									that.$alert({
+//										text: "文件大小最大为5M，请重新选择!"
+//									});
 									resolve();
 								}
 								reader.readAsDataURL(file);
