@@ -81,3 +81,5 @@ axios.interceptors.response.use((res) => {
 	return Promise.reject(error);
 });
 ```
+
+>参考文档[https://www.kancloud.cn/yunye/axios/234845](https://www.kancloud.cn/yunye/axios/234845)
