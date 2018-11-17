@@ -101,7 +101,7 @@ route.afterEach((to, from, next) => {
 });
 ```
 
-**确保要调用 next 方法，否则钩子就不会被 resolved。**该方法*[参数含义](https://segmentfault.com/a/1190000009651628)*:
+**确保要调用 next 方法，否则钩子就不会被 resolved**。该方法*[参数含义](https://segmentfault.com/a/1190000009651628)*:
 
 *	to: Route: 即将要进入的目标 路由对象
 

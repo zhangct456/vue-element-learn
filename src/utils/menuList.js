@@ -21,10 +21,10 @@ const MENU_LIST = [{
 			"text": "路由"
 		},
 		{
-			"name": "vuexStore",
-			"fileName": "VuexStore",
-			"url": "vuexStore",
-			"text": "配置Vuex"
+			"name": "vueAxios",
+			"fileName": "VueAxios",
+			"url": "vueAxios",
+			"text": "配置Axios"
 		}]
 	},{
 		"name": "test",
