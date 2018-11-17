@@ -46,6 +46,8 @@ axios.defaults.timeout = 5000;
 定义一个参数`baseUrl`，参数设置为`/local/`时使用本地数据模拟，把部分post方法转换成get方法，本地数据放在`/static/data`文件夹。
 
 ```
+const baseUrl = '/local/';
+
 axios.interceptors.request.use((config) => {
 	//设置url
 	if(baseUrl != '/local/'){
