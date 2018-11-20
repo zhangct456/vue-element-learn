@@ -1,6 +1,6 @@
 ## Axios
 
-### 安装
+#### 安装
 
 ```
 cnpm i axios -S
@@ -8,7 +8,7 @@ cnpm i axios -S
 
 ----
 
-### 引入
+#### 引入
 
 ```
 //setting/index.js
@@ -19,7 +19,7 @@ Vue.prototype.$remote = axios
 
 ----
 
-### 配置
+#### 配置
 
 写在`setting/axios.conf.js`中：
 

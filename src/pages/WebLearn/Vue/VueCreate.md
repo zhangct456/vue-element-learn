@@ -1,6 +1,6 @@
 ## vue项目创建
 
-### 全局安装 vue-cli VUE的脚手架工具
+#### 全局安装 vue-cli VUE的脚手架工具
 
 ```
 npm install -g vue-cli
@@ -15,15 +15,15 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ----
 
-### 创建项目
+#### 创建项目
 
-##### 进入文件夹
+###### 进入文件夹
 
 ```
 cd ...
 ```
 
-##### 初始化项目
+###### 初始化项目
 
 ```
 vue init webpack VueLearn(文件夹名称)
@@ -42,7 +42,7 @@ vue init webpack VueLearn(文件夹名称)
 9. 是否需要安装测试功能	n
 
 
-##### 测试结果
+###### 测试结果
 
 ```
 cd vuelearn
@@ -58,7 +58,7 @@ cnpm run dev
 
 ----
 
-### 热更新
+#### 热更新
 
 创建的项目默认热更新，电脑性能比较差，所以关闭热更新。
 
@@ -98,7 +98,7 @@ devServer: {
 
 ----
 
-### 文件目录结构
+#### 文件目录结构
 
 修改src文件夹中的目录，结果：
 

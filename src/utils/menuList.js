@@ -7,7 +7,7 @@ const MENU_LIST = [{
 		"name": "vue",
 		"fileName": "Vue",
 		"url": "vue",
-		"text": "vue",
+		"text": "vue(本案例)",
 		"children": [{
 			"name": "vueCreate",
 			"fileName": "VueCreate",
@@ -25,6 +25,12 @@ const MENU_LIST = [{
 			"fileName": "VueAxios",
 			"url": "vueAxios",
 			"text": "配置Axios"
+		},
+		{
+			"name": "vuexStore",
+			"fileName": "VuexStore",
+			"url": "vuexStore",
+			"text": "Vuex状态管理器"
 		}]
 	},{
 		"name": "test",

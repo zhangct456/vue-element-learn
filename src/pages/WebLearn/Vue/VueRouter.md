@@ -1,6 +1,6 @@
 ## 路由配置
 
-### 安装引入
+#### 安装引入
 
 根目录下cmd执行：
 ```
@@ -42,7 +42,7 @@ new Vue({
 
 ----
 
-### 路由配置
+#### 路由配置
 
 <center>
 <img src="@/assets/images/WebLearn/router-menu.jpg" width="40%" />
@@ -81,7 +81,7 @@ var route = new Router({
 
 ----
 
-### 监听跳转
+#### 监听跳转
 
 `beforeEach`：路由跳转前执行；
 
@@ -117,7 +117,7 @@ route.afterEach((to, from, next) => {
 
 ----
 
-### 优化
+#### 优化
 
 rouer信息可以写成json格式：
 
