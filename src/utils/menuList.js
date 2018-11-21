@@ -31,6 +31,12 @@ const MENU_LIST = [{
 			"fileName": "VuexStore",
 			"url": "vuexStore",
 			"text": "Vuex状态管理器"
+		},
+		{
+			"name": "elementUI",
+			"fileName": "ElementUI",
+			"url": "elementUI",
+			"text": "ElementUI"
 		}]
 	},{
 		"name": "test",
