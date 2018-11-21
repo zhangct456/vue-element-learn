@@ -115,6 +115,24 @@ route.afterEach((to, from, next) => {
 	
 	*	next('/') 或者 next({ path: '/' }): 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。
 
+###### 监听无效路由
+
+路由跳转前进行判断，未匹配到路由时，如果上级也未匹配到路由则跳转登录页面，如果上级能匹配到则转上级路由。
+
+```
+route.beforeEach((to, from, next)=>{
+  if(to.matched.length === 0){//路由不存在
+  	if(from.name){
+  		next({name: from.name});//如果上级能匹配到则转上级路由
+  	}else{
+  		next('/');//否则返回根路由
+  	}
+  }else{//匹配到则直接跳转
+  	next();
+  }
+});
+```
+
 ----
 
 #### 优化
@@ -168,8 +186,8 @@ export default getSubMenu
  * utils/createRouter.js
  * 参数:		subMenu:	子路由的信息
  * 			subRoute:	接收空json，处理后该json成为结果
- * 			parentFileName: 回调用，一般不传
- * 			level:	回调用，一般不传
+ * 			parentFileName: 回调用，文件或文件夹名字
+ * 			level:	回调用，区分第几级路由
  * 
  * {
 	"name": "webLearn",			//对应路由name
