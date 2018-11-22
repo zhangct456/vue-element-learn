@@ -39,7 +39,7 @@
 					if(file){
 						if(!reg.test(file.name)){
 							that.$alert({
-								text: "文件格式不正验，请重新选择!(支持jpg/png)"
+								text: "文件格式不正确，请重新选择!(支持jpg/png)"
 							});
 							return
 						}
