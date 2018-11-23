@@ -11,6 +11,8 @@
 
 <script>
 import Header from "@/components/Header"
+import {highlightCode} from "@/utils"
+
 export default {
   name: 'App',
   components: {
@@ -19,6 +21,10 @@ export default {
   methods: {
   },
   mounted() {
+  	highlightCode()
+  },
+  updated() {
+  	highlightCode()
   }
 }
 </script>
