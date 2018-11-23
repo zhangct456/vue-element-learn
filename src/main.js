@@ -9,6 +9,7 @@ import "@/assets/js/jquery-1.9.1.js"
 
 import "@/assets/css/commen.css"
 import "@/assets/css/markdown.css"
+import 'highlight.js/styles/color-brewer.css'
 
 Vue.config.productionTip = false
 
