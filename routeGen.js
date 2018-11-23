@@ -39,8 +39,9 @@ function displayDir(filePath) {
 		tFileName2 = tFileName2[0] + tFileName.substring(1, tFileName.length);
 		var tt = {
 			"url": tFileName2,
+			"name": tFileName2,
 			"fileName": tFileName,
-			"name": tFileName2
+			"text": tFileName
 		}
 
 		var filedir = path.join(filePath, fileName);
