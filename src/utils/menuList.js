@@ -37,6 +37,12 @@ const MENU_LIST = [{
 			"fileName": "ElementUI",
 			"url": "elementUI",
 			"text": "ElementUI"
+		},
+		{
+			"name": "markDown",
+			"fileName": "MarkDown",
+			"url": "markDown",
+			"text": "MarkDown文件"
 		}]
 	},{
 		"name": "test",
