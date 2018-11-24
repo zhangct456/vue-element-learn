@@ -120,6 +120,6 @@ const highlightCode = () => {
   }
 ```
 
-> 进一步优化，可以在markdown文件中插入vue组件，需要创建自定义的markdown语法，在loader中配置处理方法，
+> 进一步优化，可以在markdown文件中插入vue组件，需要创建自定义的markdown代码块，在loader中配置处理方法，
 可以参考大佬的博客[https://blog.csdn.net/m0_37972557/article/details/81089887](https://blog.csdn.net/m0_37972557/article/details/81089887),
 使用的是elementui教程网站的例子。
