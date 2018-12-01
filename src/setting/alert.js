@@ -4,7 +4,8 @@ import Vue from 'vue'
 const defaults = {
     alertFlag:false,
     text:'',
-    title:'温馨提示'
+    title:'温馨提示',
+    callback: function(){}
 };
 
 let alertVueLoading; // 当前弹框，判断是否有弹框存在

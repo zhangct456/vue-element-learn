@@ -28,7 +28,10 @@
 		watch: {},
 		methods: {
 			closeFn: function() {
-				this.close();
+				var that = this;
+				this.close().then(function(){
+					this.callback();
+				});
 			}
 		},
 		beforeCreated() {},
