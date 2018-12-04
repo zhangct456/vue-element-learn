@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import WebRouter from './webLearn/webLearn.route'
+import Notes from './notes/notes.route'
 
 Vue.use(Router)
 
@@ -8,7 +9,8 @@ Vue.use(Router)
 var route = new Router({
   routes: [
 		{path: '/', redirect: '/webLearn'},
-	  WebRouter
+	  WebRouter,
+	  Notes
 	]
 })
 

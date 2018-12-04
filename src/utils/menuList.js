@@ -56,6 +56,30 @@ const MENU_LIST = [{
 			"text": "测试"
 		}]
 	}]
+},
+{
+	"name": "notes",
+	"fileName": "Notes",
+	"url": "notes",
+	"text": "笔记",
+	"children": [{
+		"name": "node",
+		"fileName": "Node",
+		"url": "node",
+		"text": "node",
+		"children": []
+	},{
+		"name": "gulp",
+		"fileName": "Gulp",
+		"url": "gulp",
+		"text": "gulp",
+		"children": [{
+			"name": "gulp",
+			"fileName": "Gulp",
+			"url": "gulp",
+			"text": "gulp"
+		}]
+	}]
 }]
 
 const getSubMenu = function(key) {

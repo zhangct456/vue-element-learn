@@ -14,6 +14,9 @@
 	}
  */
 function createRouter(subMenu, subRoute, parentFileName, level) {
+	if(!subMenu){
+		return;
+	}
 	if(!parentFileName) {
 		parentFileName = '';
 	}
@@ -24,7 +27,8 @@ function createRouter(subMenu, subRoute, parentFileName, level) {
 		subRoute.path = subMenu.url;
 	}
 	subRoute.name = level + subMenu.name;//n级子路由name前加n个下划线，区分路由等级
-	if(subMenu.children && subMenu.children.length > 0){
+//	if(subMenu.children && subMenu.children.length > 0){
+	if(subMenu.children){
 		subRoute.component = () => import('@/pages/' + parentFileName + subMenu.fileName + "/Mod");
 	}else{
 		subRoute.component = () => import('@/pages/' + parentFileName + subMenu.fileName);
