@@ -67,7 +67,12 @@ const MENU_LIST = [{
 		"fileName": "Node",
 		"url": "node",
 		"text": "node",
-		"children": []
+		"children": [{
+			"name": "uploadFile",
+			"fileName": "UploadFile",
+			"url": "uploadFile",
+			"text": "文件上传"
+		}]
 	},{
 		"name": "gulp",
 		"fileName": "Gulp",

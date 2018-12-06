@@ -4,7 +4,8 @@ import qs from 'qs'
 // axios 配置
 axios.defaults.timeout = 5000;
 //axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
-const baseUrl = '/local/';
+const baseUrl = '/test/'
+//const baseUrl = '/local/';
 //const baseUrl = '/mobile/';
 
 //remote before
