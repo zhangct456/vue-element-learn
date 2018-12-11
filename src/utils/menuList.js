@@ -68,21 +68,20 @@ const MENU_LIST = [{
 		"url": "node",
 		"text": "node",
 		"children": [{
-			"name": "uploadFile",
-			"fileName": "UploadFile",
-			"url": "uploadFile",
-			"text": "文件上传"
-		}]
-	},{
-		"name": "gulp",
-		"fileName": "Gulp",
-		"url": "gulp",
-		"text": "gulp",
-		"children": [{
+			"name": "install",
+			"fileName": "Install",
+			"url": "install",
+			"text": "install"
+		},{
 			"name": "gulp",
 			"fileName": "Gulp",
 			"url": "gulp",
 			"text": "gulp"
+		},{
+			"name": "fileUpload",
+			"fileName": "FileUpload",
+			"url": "fileUpload",
+			"text": "文件上传"
 		}]
 	}]
 }]

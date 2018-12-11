@@ -1,6 +1,8 @@
 ## gulp
 
-> API文档[https://www.gulpjs.com.cn/docs/api/](https://www.gulpjs.com.cn/docs/api/)
+> API文档 [https://www.gulpjs.com.cn/docs/api/](https://www.gulpjs.com.cn/docs/api/)
+
+----
 
 ##### 安装
 
