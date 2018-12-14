@@ -51,11 +51,11 @@ form.parse(req, function(err, fields, files) {
 
 回调函数参数：
 
-* `err` ：报错信息；
+* `err` ：出错时的报错信息；
 * `fields` ：提交表单中除文件外的其它信息，json格式；
 * `files` ：提交表单中的文件
 
-保存后的文件名为“[交易名]_[随机字符串]”，无文件后缀，可以在保存后用`fs.rename()`方法修改，或者设置 `form.keepExtensions = true`文件将保持原扩展名。
+保存后的文件名为“[交易名]_[随机字符串]”，无文件后缀，可以在保存后用`fs.rename()`方法修改。
 
 代码：
 
