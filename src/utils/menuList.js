@@ -87,6 +87,11 @@ const MENU_LIST = [{
 			"fileName": "FileUpload",
 			"url": "fileUpload",
 			"text": "文件上传"
+		},{
+			"name": "npm",
+			"fileName": "Npm",
+			"url": "npm",
+			"text": "npm"
 		}]
 	}]
 }]
