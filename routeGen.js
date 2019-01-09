@@ -12,10 +12,12 @@ fs.readFile(resultFileName, function(err, data){
 		console.log(err);
 	}else{
 		var data = data.toString();
+		//处理文件内容
 		data = data.split('const');
 		var tt = data[1].split('=');
 		data[1] = tt[0] + ' = ' + JSON.stringify(displayDir(filePath)) + '\n'
 		data = data.join('const');
+		//处理文件内容--end
 		fs.writeFile(resultFileName, data, function(err){
 			if(err) {
 				return console.log(err);
