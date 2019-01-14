@@ -6,6 +6,8 @@
 npm update
 ```
 
+----
+
 ##### 更新指定模块
 
 例如`webpack-dev-server`：
