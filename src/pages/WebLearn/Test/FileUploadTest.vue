@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name: "UploadFile",
+		name: "FileUploadTest",
 		data() {
 			return{
 				file: ''

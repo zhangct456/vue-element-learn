@@ -55,9 +55,9 @@ const MENU_LIST = [{
 			"url": "test",
 			"text": "测试"
 		},{
-			"name": "fileUpload",
-			"fileName": "FileUpload",
-			"url": "fileUpload",
+			"name": "fileUploadTest",
+			"fileName": "FileUploadTest",
+			"url": "fileUploadTest",
 			"text": "测试上传文件功能"
 		}]
 	}]
