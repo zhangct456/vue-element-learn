@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<input type="file" @change="changeFile($event)" />
+		<input type="file" @change="changeFile($event)"/>
 		<button @click="uploadFile()">上传</button>
 	</div>
 </template>

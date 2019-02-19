@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<ImgButton v-model="img" @change="changeImg"></ImgButton>
-		<input id="testfile" type="file" @change="getImgFile($event)" />
+		<ImgButton v-model="img" @change="changeImg" :multiple="true"></ImgButton>
+		<img />
 	</div>
 </template>
 
@@ -15,8 +15,6 @@
 		},
 		data() {
 			return{
-				pageNo: 1,
-				pages: 15,
 				img: '',
 			}
 		},
@@ -30,8 +28,7 @@
 				})
 			},
 			changeImg() {
-				console.log(dataURLtoBlob(this.img))
-				console.log(this.img2)
+				console.log(this.img)
 			},
 			getImgFile(event) {
 				console.log(event.target.value);
