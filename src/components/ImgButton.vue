@@ -2,10 +2,24 @@
 	<div>
 		<input v-if="!multiple" class="img-file" type="file" @change="getImgFile($event)">
 		<input v-else class="img-file" type="file" @change="getImgFile($event)" multiple="multiple">
-		<input type="button" class="btns btnBlue" value="上传图片" @click="triggerFile($event)">
+		<input type="button" class="file-btn" value="选择图片" @click="triggerFile($event)">
 	</div>
 </template>
-
+<style scoped>
+	.img-file{
+		display: none;
+	}
+	.file-btn{
+		width: 200px;
+		height: 40px;
+		line-height: 40px;
+		border: none;
+		border-radius: 5px;
+		background-color: blue;
+		color: white;
+		margin: 5px;
+	}
+</style>
 <script>
 	export default {
 		name: "ImgButton",
@@ -51,12 +65,13 @@
 						}
 						reader.readAsDataURL(file);
 						reader.onload = function() {
-							that.currentValue = reader.result;
+							that.currentValue = [reader.result];
 							that.$emit('input', that.currentValue);
 							that.$emit('change');
 						}
 					}
 				}else {
+					that.currentValues = [];
 					let files = $event.target.files;
 					let getFileFns = [];
 					for(let i = 0 ; i < files.length ; i ++){
@@ -66,11 +81,11 @@
 							if(file){
 								if(!reg.test(file.name)){
 //									that.$alert({
-//										text: "文件格式不正验，请重新选择!(支持jpg/png)"
+//										text: "文件格式不正确，请重新选择!(支持jpg/png)"
 //									});
 									resolve();
 								}
-								if(file.size > 5242880){
+								if(file.size > 5000000){
 //									that.$alert({
 //										text: "文件大小最大为5M，请重新选择!"
 //									});
