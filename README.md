@@ -21,7 +21,8 @@ npm run build --report
 ## router设置
 
 	src/utils/menuList.js中存放router的json数据
-	src/router 中获取到router信息后使用 src/utils/routerCreate.js 中的方法生成router
+	手动修改该json数据
+	根据src/pages下的文件结构自动生成 npm run route
 
 ## 项目目录结构
 
