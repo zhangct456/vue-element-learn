@@ -1,3 +1,4 @@
+<!--Vue-->
 <template>
 	<div>
 		<router-view class="markdown-body"/>

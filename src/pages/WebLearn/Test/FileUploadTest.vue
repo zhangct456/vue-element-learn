@@ -1,3 +1,4 @@
+<!--测试文件上传-->
 <template>
 	<div>
 		<input type="file" @change="changeFile($event)"/>

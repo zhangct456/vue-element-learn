@@ -26,7 +26,7 @@ route.beforeEach((to, from, next)=>{
   }
 });
 route.afterEach((to, from, next) => {
-    console.log(to.path);
+//  console.log(to.path);
 });
 
 export default route

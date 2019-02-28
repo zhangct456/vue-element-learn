@@ -1,3 +1,4 @@
+<!--图片按钮-->
 <template>
 	<div>
 		<ImgButton v-model="imgs" @change="changeImg" :multiple="true"></ImgButton>

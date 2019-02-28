@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="main">
 	  <el-container class="all-box">
 		  <el-header>
 		  	<Header></Header>

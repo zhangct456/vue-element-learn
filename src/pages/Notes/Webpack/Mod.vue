@@ -1,3 +1,4 @@
+<!--Webpack-->
 <template>
 	<div>
 		<router-view class="markdown-body"/>
