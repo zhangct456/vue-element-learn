@@ -1,6 +1,6 @@
 # vue
 
-> A Vue.js project
+> [A Vue.js project](https://zhangct456.github.io/vue_learn_dist/)
 
 ## Build Setup
 
